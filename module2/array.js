@@ -2,6 +2,7 @@
 let arr =[];
 console.log(arr);
 
+
 //elements in array
 let arrEle=[1,2,3,9,"I am String",false,9.9];
 console.log(arrEle);
@@ -15,6 +16,8 @@ console.log(arrEle);
 arrEle[6] = "nothin";
 console.log(arrEle); 
 console.log("########################################################################");
+
+
 //Arrays method
 //push
 console.log("Before Push"+arrEle);
