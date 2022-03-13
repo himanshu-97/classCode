@@ -11,6 +11,9 @@ console.log("Element at 1st index "+arrEle[1]);
 
 arrEle[3] = "nothing";
 console.log(arrEle); 
+
+arrEle[6] = "nothin";
+console.log(arrEle); 
 console.log("########################################################################");
 //Arrays method
 //push
