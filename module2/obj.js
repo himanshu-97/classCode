@@ -24,3 +24,24 @@ let capAmerica = {
     }
 }
 console.log(capAmerica);
+
+//name of capAmerica
+console.log(capAmerica.name);
+
+//age of capAmerica
+console.log(capAmerica.age);
+
+//friends of capAmerica
+console.log(capAmerica.friends);
+
+//first friend of capAmerica
+console.log(capAmerica.friends[0]);
+
+//address of capAmerica
+console.log(capAmerica.address);
+
+//city of capAmerica
+console.log(capAmerica.address.city);
+
+//calls saysHello function
+capAmerica.saysHello();
