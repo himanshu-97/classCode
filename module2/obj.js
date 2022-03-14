@@ -65,3 +65,4 @@ console.log(capAmerica);
 //second method to access key
 console.log(capAmerica.name);
 console.log(capAmerica["name"]);
+console.log(capAmerica["address"]["city"]);
