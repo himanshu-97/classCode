@@ -16,12 +16,28 @@ console.log(filePath);
 //2nd - if file exists, it overwrites the existing content 
 fs.writeFileSync(filePath,"Hello I am file.js");
 
+//"Creating" the folder/directory with the help of fs.mkdir
+fs.mkdir(path.join(__dirname,"yo"), (err) => {
+    if (err) {
+        return console.error(err);
+    }
+    console.log('Directory created successfully!');
+});
+
 //overwriting existing file
 fs.writeFileSync(filePath,"Hello I am file.js and content is overwritted by writeFileSync");
 
 //"Reading" the file with the help of fs.readFileSync
 let content = fs.readFileSync(filePath,"utf-8");
 console.log(content);
+
+//"Reading" the folder/directory with the help of fs.readdir
+let dirContent = fs.readdir(path.join(__dirname,"yo"), (err) => {
+    if (err) {
+        return console.error(err);
+    }
+    console.log('Reading Directory successfully!');
+});
 
 //"Updating" the file with the help of fs.appendFileSync
 console.log("Before Update :");
@@ -34,4 +50,12 @@ console.log(readAfter);
 
 //"DELETE" the file by fs.unlinkSync
 fs.unlinkSync(filePath);
+
+//"DELETE "the folder by fs.rmdir()
+fs.rmdir(path.join(__dirname,"yo"),(err) => {
+    if (err) {
+        return console.error(err);
+    }
+    console.log('DELETED FOLDER SUCESSFULLY!');
+});
 
