@@ -19,6 +19,7 @@ let capAmerica = {
         city:"Queens",
         state:"USA"
     },
+    isAvenger:false,
     saysHello:function(){
         console.log("Hello From Cap America");
     }
@@ -45,3 +46,22 @@ console.log(capAmerica.address.city);
 
 //calls saysHello function
 capAmerica.saysHello();
+
+//add a new key to obj
+console.log("object before update",capAmerica);
+capAmerica.movies = ["Avenger","Civil War","Endgame"];
+console.log("object after update",capAmerica);
+
+//delete a key
+delete capAmerica.movies;
+console.log(capAmerica);
+
+//updating key value pair
+capAmerica.isAvenger = true;
+console.log(capAmerica);
+capAmerica.address.state = "New York";
+console.log(capAmerica);
+
+//second method to access key
+console.log(capAmerica.name);
+console.log(capAmerica["name"]);
