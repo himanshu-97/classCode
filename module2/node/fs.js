@@ -16,6 +16,7 @@ console.log(filePath);
 //2nd - if file exists, it overwrites the existing content 
 fs.writeFileSync(filePath,"Hello I am file.js");
 
+
 //overwriting existing file
 fs.writeFileSync(filePath,"Hello I am file.js and content is overwritted") ;
 
