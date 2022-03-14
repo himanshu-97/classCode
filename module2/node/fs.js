@@ -59,3 +59,18 @@ fs.rmdir(path.join(__dirname,"yo"),(err) => {
     console.log('DELETED FOLDER SUCESSFULLY!');
 });
 
+//fs.copyFile( src, dest, mode, callback )
+//first we fill create a file
+let filePath1 = path.join(__dirname,"originalFile.js");
+fs.writeFileSync(filePath1,"originalFile.js");
+
+//Creating destination
+let desPath = path.join(__dirname,"copiedFile.js");
+
+//copying file
+fs.copyFile(filePath1, desPath,(err) => {
+    if (err) {
+        return console.error(err);
+    }
+    console.log('COPIED FILE SUCESSFULLY!');
+});
