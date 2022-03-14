@@ -11,13 +11,27 @@ let path = require("path");
 let filePath = path.join(__dirname,"file.txt");
 console.log(filePath);
 
-//creating file with the help of fs.writeFileSync
+//"creating" the file with the help of fs.writeFileSync
 //1st - if file is not present, it creates file
 //2nd - if file exists, it overwrites the existing content 
 fs.writeFileSync(filePath,"Hello I am file.js");
 
-
 //overwriting existing file
-fs.writeFileSync(filePath,"Hello I am file.js and content is overwritted") ;
+fs.writeFileSync(filePath,"Hello I am file.js and content is overwritted by writeFileSync");
 
+//"Reading" the file with the help of fs.readFileSync
+let content = fs.readFileSync(filePath,"utf-8");
+console.log(content);
+
+//"Updating" the file with the help of fs.appendFileSync
+console.log("Before Update :");
+let readBefore = fs.readFileSync(filePath,"utf-8");
+console.log(readBefore);
+fs.appendFileSync(filePath,", \nUpdating Content by appendFileSync"); // \n for newline
+console.log("After Update :");
+let readAfter = fs.readFileSync(filePath,"utf-8");
+console.log(readAfter);
+
+//"DELETE" the file by fs.unlinkSync
+fs.unlinkSync(filePath);
 
